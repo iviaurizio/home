@@ -1,0 +1,95 @@
+[gd_scene load_steps=14 format=3 uid="uid://jmwmqcllp1ih"]
+
+[ext_resource type="PackedScene" uid="uid://grg4cxgfgxn1" path="res://objects/rooms/bedroom.tscn" id="1_4fycn"]
+[ext_resource type="Script" uid="uid://bgwr7pm1ramo2" path="res://scripts/main_home_script.gd" id="1_yxilm"]
+[ext_resource type="PackedScene" uid="uid://dab157jk0kuu0" path="res://objects/rooms/stairs_hallway.tscn" id="2_yxilm"]
+[ext_resource type="PackedScene" uid="uid://c3t7ly72n3wfl" path="res://objects/rooms/staircase.tscn" id="3_uhids"]
+[ext_resource type="PackedScene" uid="uid://d3jk1ys6bkw53" path="res://objects/main_char.tscn" id="5_vc333"]
+[ext_resource type="Texture2D" uid="uid://buo1q7v8uvl1e" path="res://sprites/furniture/refrigerator_512.png" id="6_vc333"]
+[ext_resource type="Texture2D" uid="uid://5c1quh6xxba1" path="res://sprites/floors/floor1_256.png" id="7_mahjx"]
+[ext_resource type="Texture2D" uid="uid://di3df68obmrol" path="res://sprites/ui/keyboard_E_512.png" id="8_4fycn"]
+[ext_resource type="Texture2D" uid="uid://s0hbc4whc8u2" path="res://sprites/other_object/door_open_512.png" id="8_vc333"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mahjx"]
+size = Vector2(1096, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hhep5"]
+size = Vector2(8, 360)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4fycn"]
+size = Vector2(1048, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vc333"]
+size = Vector2(8, 304)
+
+[node name="home" type="Node2D"]
+script = ExtResource("1_yxilm")
+
+[node name="bedroom" parent="." instance=ExtResource("1_4fycn")]
+
+[node name="stairs_hallway" parent="." instance=ExtResource("2_yxilm")]
+
+[node name="staircase" parent="." instance=ExtResource("3_uhids")]
+
+[node name="exit_hallway" type="Node2D" parent="."]
+
+[node name="Floor1256" type="Sprite2D" parent="exit_hallway"]
+position = Vector2(644, 760)
+scale = Vector2(1.1322315, 0.082644634)
+texture = ExtResource("7_mahjx")
+
+[node name="DoorOpen512" type="Sprite2D" parent="exit_hallway"]
+position = Vector2(816, 648)
+scale = Vector2(0.5625, 0.5625)
+texture = ExtResource("8_vc333")
+
+[node name="exit_hallway_collision" type="StaticBody2D" parent="exit_hallway"]
+
+[node name="horizontal" type="CollisionShape2D" parent="exit_hallway/exit_hallway_collision"]
+position = Vector2(644, 796)
+shape = SubResource("RectangleShape2D_mahjx")
+
+[node name="vertical" type="CollisionShape2D" parent="exit_hallway/exit_hallway_collision"]
+position = Vector2(2244, 620)
+shape = SubResource("RectangleShape2D_hhep5")
+
+[node name="kitchen" type="Node2D" parent="."]
+
+[node name="Floor1256" type="Sprite2D" parent="kitchen"]
+position = Vector2(1716, 760)
+scale = Vector2(1.0826445, 0.082644686)
+texture = ExtResource("7_mahjx")
+
+[node name="kitchen_collision" type="StaticBody2D" parent="kitchen"]
+
+[node name="horizontal" type="CollisionShape2D" parent="kitchen/kitchen_collision"]
+position = Vector2(1716, 796)
+shape = SubResource("RectangleShape2D_4fycn")
+
+[node name="vertical" type="CollisionShape2D" parent="kitchen/kitchen_collision"]
+position = Vector2(92, 648)
+shape = SubResource("RectangleShape2D_vc333")
+
+[node name="Refrigerator512" type="Sprite2D" parent="kitchen"]
+position = Vector2(2168.0002, 592.00006)
+scale = Vector2(0.640625, 0.640625)
+texture = ExtResource("6_vc333")
+
+[node name="main_char" parent="." instance=ExtResource("5_vc333")]
+position = Vector2(464, 56)
+SPEED = 2000.0
+GRAVITY = 10000.0
+
+[node name="Camera2D2" type="Camera2D" parent="main_char"]
+position = Vector2(-2, 1)
+
+[node name="FloatingE" type="Sprite2D" parent="main_char"]
+visible = false
+position = Vector2(4.7683716e-07, -176.00002)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("8_4fycn")
+
+[connection signal="enter_on_puppet_world" from="bedroom" to="." method="_on_bedroom_enter_on_puppet_world"]
+[connection signal="enter_on_stair" from="stairs_hallway" to="." method="_on_stairs_hallway_enter_on_stair"]
+[connection signal="exit_stair_down" from="staircase" to="." method="_on_staircase_exit_stair_down"]
+[connection signal="exit_stair_up" from="staircase" to="." method="_on_staircase_exit_stair_up"]

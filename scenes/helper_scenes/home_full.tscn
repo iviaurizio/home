@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://dhj4whr105jjh"]
+
+[ext_resource type="PackedScene" uid="uid://grg4cxgfgxn1" path="res://objects/rooms/bedroom.tscn" id="1_bx3cs"]
+[ext_resource type="PackedScene" uid="uid://dab157jk0kuu0" path="res://objects/rooms/stairs_hallway.tscn" id="2_a74ds"]
+[ext_resource type="PackedScene" uid="uid://c3t7ly72n3wfl" path="res://objects/rooms/staircase.tscn" id="3_n6lm3"]
+[ext_resource type="PackedScene" uid="uid://d3jk1ys6bkw53" path="res://objects/main_char.tscn" id="4_ay2ut"]
+[ext_resource type="Texture2D" uid="uid://di3df68obmrol" path="res://sprites/ui/keyboard_E_512.png" id="5_ngxsa"]
+
+[node name="home_full" type="Node2D"]
+
+[node name="bedroom" parent="." instance=ExtResource("1_bx3cs")]
+
+[node name="stairs_hallway" parent="." instance=ExtResource("2_a74ds")]
+
+[node name="staircase" parent="." instance=ExtResource("3_n6lm3")]
+
+[node name="main_char" parent="." instance=ExtResource("4_ay2ut")]
+position = Vector2(464, 56)
+SPEED = 400.0
+GRAVITY = 1000.0
+
+[node name="Camera2D" type="Camera2D" parent="main_char"]
+position = Vector2(-2, 1)
+
+[node name="FloatingE" type="Sprite2D" parent="main_char"]
+visible = false
+position = Vector2(4.7683716e-07, -176.00002)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("5_ngxsa")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(124, 189)

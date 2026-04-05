@@ -1,0 +1,488 @@
+[gd_scene load_steps=9 format=3 uid="uid://c3t7ly72n3wfl"]
+
+[ext_resource type="Texture2D" uid="uid://c0qkoohn0v8g1" path="res://sprites/other_object/scalino_filler_512.png" id="1_a8rde"]
+[ext_resource type="Script" uid="uid://46dv68ybw05a" path="res://scripts/staircase.gd" id="1_yvdkv"]
+[ext_resource type="Texture2D" uid="uid://5c1quh6xxba1" path="res://sprites/floors/floor1_256.png" id="2_sf76h"]
+[ext_resource type="Texture2D" uid="uid://ch26nxkm6alyg" path="res://sprites/other_object/scalino_512.png" id="2_yvdkv"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_sf76h"]
+a = Vector2(-1408, 576)
+b = Vector2(-56, -8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yvdkv"]
+size = Vector2(104, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a8rde"]
+size = Vector2(8, 208)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sf76h"]
+size = Vector2(8, 208)
+
+[node name="staircase" type="Node2D"]
+script = ExtResource("1_yvdkv")
+
+[node name="Floor1256" type="Sprite2D" parent="."]
+position = Vector2(852, 788)
+scale = Vector2(0.23966944, 0.00826448)
+texture = ExtResource("2_sf76h")
+
+[node name="filler" type="Node2D" parent="."]
+
+[node name="filler1" type="Node2D" parent="filler"]
+
+[node name="ScalinoFiller512" type="Sprite2D" parent="filler/filler1"]
+position = Vector2(1056, 728)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="filler2" type="Node2D" parent="filler"]
+
+[node name="ScalinoFiller513" type="Sprite2D" parent="filler/filler2"]
+position = Vector2(1168, 680)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller514" type="Sprite2D" parent="filler/filler2"]
+position = Vector2(1168, 728)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="filler3" type="Node2D" parent="filler"]
+
+[node name="ScalinoFiller515" type="Sprite2D" parent="filler/filler3"]
+position = Vector2(1280, 632)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller516" type="Sprite2D" parent="filler/filler3"]
+position = Vector2(1280, 680)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller517" type="Sprite2D" parent="filler/filler3"]
+position = Vector2(1280, 728)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="filler4" type="Node2D" parent="filler"]
+
+[node name="ScalinoFiller518" type="Sprite2D" parent="filler/filler4"]
+position = Vector2(1392, 584)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller519" type="Sprite2D" parent="filler/filler4"]
+position = Vector2(1392, 632)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller520" type="Sprite2D" parent="filler/filler4"]
+position = Vector2(1392, 680)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller521" type="Sprite2D" parent="filler/filler4"]
+position = Vector2(1392, 728)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="filler5" type="Node2D" parent="filler"]
+
+[node name="ScalinoFiller528" type="Sprite2D" parent="filler/filler5"]
+position = Vector2(1512, 536)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller529" type="Sprite2D" parent="filler/filler5"]
+position = Vector2(1512, 584)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller530" type="Sprite2D" parent="filler/filler5"]
+position = Vector2(1512, 632)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller531" type="Sprite2D" parent="filler/filler5"]
+position = Vector2(1512, 680)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller532" type="Sprite2D" parent="filler/filler5"]
+position = Vector2(1512, 728)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="filler6" type="Node2D" parent="filler"]
+
+[node name="ScalinoFiller527" type="Sprite2D" parent="filler/filler6"]
+position = Vector2(1616, 488)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller528" type="Sprite2D" parent="filler/filler6"]
+position = Vector2(1616, 536)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller529" type="Sprite2D" parent="filler/filler6"]
+position = Vector2(1616, 584)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller530" type="Sprite2D" parent="filler/filler6"]
+position = Vector2(1616, 632)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller531" type="Sprite2D" parent="filler/filler6"]
+position = Vector2(1616, 680)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller532" type="Sprite2D" parent="filler/filler6"]
+position = Vector2(1616, 728)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="filler7" type="Node2D" parent="filler"]
+
+[node name="ScalinoFiller526" type="Sprite2D" parent="filler/filler7"]
+position = Vector2(1728, 440)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller527" type="Sprite2D" parent="filler/filler7"]
+position = Vector2(1728, 488)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller528" type="Sprite2D" parent="filler/filler7"]
+position = Vector2(1728, 536)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller529" type="Sprite2D" parent="filler/filler7"]
+position = Vector2(1728, 584)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller530" type="Sprite2D" parent="filler/filler7"]
+position = Vector2(1728, 632)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller531" type="Sprite2D" parent="filler/filler7"]
+position = Vector2(1728, 680)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller532" type="Sprite2D" parent="filler/filler7"]
+position = Vector2(1728, 728)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="filler8" type="Node2D" parent="filler"]
+
+[node name="ScalinoFiller525" type="Sprite2D" parent="filler/filler8"]
+position = Vector2(1840, 392)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller526" type="Sprite2D" parent="filler/filler8"]
+position = Vector2(1840, 440)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller527" type="Sprite2D" parent="filler/filler8"]
+position = Vector2(1840, 488)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller528" type="Sprite2D" parent="filler/filler8"]
+position = Vector2(1840, 536)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller529" type="Sprite2D" parent="filler/filler8"]
+position = Vector2(1840, 584)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller530" type="Sprite2D" parent="filler/filler8"]
+position = Vector2(1840, 632)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller531" type="Sprite2D" parent="filler/filler8"]
+position = Vector2(1840, 680)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller532" type="Sprite2D" parent="filler/filler8"]
+position = Vector2(1840, 728)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="filler9" type="Node2D" parent="filler"]
+
+[node name="ScalinoFiller524" type="Sprite2D" parent="filler/filler9"]
+position = Vector2(1952, 344)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller525" type="Sprite2D" parent="filler/filler9"]
+position = Vector2(1952, 392)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller526" type="Sprite2D" parent="filler/filler9"]
+position = Vector2(1952, 440)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller527" type="Sprite2D" parent="filler/filler9"]
+position = Vector2(1952, 488)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller528" type="Sprite2D" parent="filler/filler9"]
+position = Vector2(1952, 536)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller529" type="Sprite2D" parent="filler/filler9"]
+position = Vector2(1952, 584)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller530" type="Sprite2D" parent="filler/filler9"]
+position = Vector2(1952, 632)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller531" type="Sprite2D" parent="filler/filler9"]
+position = Vector2(1952, 680)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller532" type="Sprite2D" parent="filler/filler9"]
+position = Vector2(1952, 728)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="filler10" type="Node2D" parent="filler"]
+
+[node name="ScalinoFiller523" type="Sprite2D" parent="filler/filler10"]
+position = Vector2(2064, 296)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller524" type="Sprite2D" parent="filler/filler10"]
+position = Vector2(2064, 344)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller525" type="Sprite2D" parent="filler/filler10"]
+position = Vector2(2064, 392)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller526" type="Sprite2D" parent="filler/filler10"]
+position = Vector2(2064, 440)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller527" type="Sprite2D" parent="filler/filler10"]
+position = Vector2(2064, 488)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller528" type="Sprite2D" parent="filler/filler10"]
+position = Vector2(2064, 536)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller529" type="Sprite2D" parent="filler/filler10"]
+position = Vector2(2064, 584)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller530" type="Sprite2D" parent="filler/filler10"]
+position = Vector2(2064, 632)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller531" type="Sprite2D" parent="filler/filler10"]
+position = Vector2(2064, 680)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller532" type="Sprite2D" parent="filler/filler10"]
+position = Vector2(2064, 728)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="filler11" type="Node2D" parent="filler"]
+
+[node name="ScalinoFiller522" type="Sprite2D" parent="filler/filler11"]
+position = Vector2(2176, 248)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller523" type="Sprite2D" parent="filler/filler11"]
+position = Vector2(2176, 296)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller524" type="Sprite2D" parent="filler/filler11"]
+position = Vector2(2176, 344)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller525" type="Sprite2D" parent="filler/filler11"]
+position = Vector2(2176, 392)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller526" type="Sprite2D" parent="filler/filler11"]
+position = Vector2(2176, 440)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller527" type="Sprite2D" parent="filler/filler11"]
+position = Vector2(2176, 488)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller528" type="Sprite2D" parent="filler/filler11"]
+position = Vector2(2176, 536)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller529" type="Sprite2D" parent="filler/filler11"]
+position = Vector2(2176, 584)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller530" type="Sprite2D" parent="filler/filler11"]
+position = Vector2(2176, 632)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller531" type="Sprite2D" parent="filler/filler11"]
+position = Vector2(2176, 680)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="ScalinoFiller532" type="Sprite2D" parent="filler/filler11"]
+position = Vector2(2176, 728)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_a8rde")
+
+[node name="scalino" type="Node2D" parent="."]
+
+[node name="Scalino512" type="Sprite2D" parent="scalino"]
+position = Vector2(2176, 200)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_yvdkv")
+
+[node name="Scalino513" type="Sprite2D" parent="scalino"]
+position = Vector2(2064, 248)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_yvdkv")
+
+[node name="Scalino514" type="Sprite2D" parent="scalino"]
+position = Vector2(1952, 296)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_yvdkv")
+
+[node name="Scalino515" type="Sprite2D" parent="scalino"]
+position = Vector2(1840, 344)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_yvdkv")
+
+[node name="Scalino516" type="Sprite2D" parent="scalino"]
+position = Vector2(1728, 392)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_yvdkv")
+
+[node name="Scalino517" type="Sprite2D" parent="scalino"]
+position = Vector2(1616, 440)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_yvdkv")
+
+[node name="Scalino518" type="Sprite2D" parent="scalino"]
+position = Vector2(1504, 488)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_yvdkv")
+
+[node name="Scalino519" type="Sprite2D" parent="scalino"]
+position = Vector2(1392, 536)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_yvdkv")
+
+[node name="Scalino520" type="Sprite2D" parent="scalino"]
+position = Vector2(1280, 584)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_yvdkv")
+
+[node name="Scalino521" type="Sprite2D" parent="scalino"]
+position = Vector2(1168, 632)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_yvdkv")
+
+[node name="Scalino522" type="Sprite2D" parent="scalino"]
+position = Vector2(1056, 680)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_yvdkv")
+
+[node name="Scalino523" type="Sprite2D" parent="scalino"]
+position = Vector2(944, 728)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_yvdkv")
+
+[node name="StairCollision" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StairCollision"]
+position = Vector2(2240, 216)
+shape = SubResource("SegmentShape2D_sf76h")
+
+[node name="StairCollision2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2Ddown" type="CollisionShape2D" parent="StairCollision2"]
+position = Vector2(780, 796)
+shape = SubResource("RectangleShape2D_yvdkv")
+
+[node name="CollisionShape2Dup" type="CollisionShape2D" parent="StairCollision2"]
+position = Vector2(2240, 212)
+shape = SubResource("RectangleShape2D_yvdkv")
+
+[node name="ExitStairDown" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitStairDown"]
+position = Vector2(740, 688)
+shape = SubResource("RectangleShape2D_a8rde")
+
+[node name="ExitStairUp" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitStairUp"]
+position = Vector2(2236, 104)
+shape = SubResource("RectangleShape2D_a8rde")
+
+[node name="LeftCollision" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftCollision"]
+position = Vector2(732, 688)
+shape = SubResource("RectangleShape2D_sf76h")
+
+[node name="RightCollision" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightCollision"]
+position = Vector2(2244, 105.5)
+shape = SubResource("RectangleShape2D_sf76h")
+
+[connection signal="body_entered" from="ExitStairDown" to="." method="_on_exit_stair_down_body_entered"]
+[connection signal="body_exited" from="ExitStairDown" to="." method="_on_exit_stair_down_body_exited"]
+[connection signal="body_entered" from="ExitStairUp" to="." method="_on_exit_stair_up_body_entered"]
+[connection signal="body_exited" from="ExitStairUp" to="." method="_on_exit_stair_up_body_exited"]

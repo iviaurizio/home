@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://dab157jk0kuu0"]
+
+[ext_resource type="Script" uid="uid://tpd7gx3ckgpj" path="res://scripts/stairs_hallway.gd" id="1_em7ks"]
+[ext_resource type="Texture2D" uid="uid://5c1quh6xxba1" path="res://sprites/floors/floor1_256.png" id="2_1vodr"]
+[ext_resource type="Texture2D" uid="uid://bl0r0cb83fqo5" path="res://sprites/other_object/handrail_512.png" id="3_bkc0e"]
+
+[sub_resource type="Gradient" id="Gradient_mahjx"]
+colors = PackedColorArray(0, 0, 0, 1, 0.40832946, 0.40832946, 0.40832946, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_c0aqo"]
+gradient = SubResource("Gradient_mahjx")
+width = 250
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0k5vt"]
+size = Vector2(1048, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b4625"]
+size = Vector2(8, 320)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rmkok"]
+size = Vector2(8, 122)
+
+[node name="stairs_hallway" type="Node2D"]
+script = ExtResource("1_em7ks")
+
+[node name="Floor1256" type="Sprite2D" parent="."]
+position = Vector2(1716, 175.99998)
+scale = Vector2(1.0826446, 0.08264461)
+texture = ExtResource("2_1vodr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2068, 162.125)
+scale = Vector2(1.376, 52.249996)
+texture = SubResource("GradientTexture1D_c0aqo")
+
+[node name="Handrail512" type="Sprite2D" parent="."]
+position = Vector2(1968.0001, 111.99999)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("3_bkc0e")
+
+[node name="stairs_hallway_collision" type="StaticBody2D" parent="."]
+
+[node name="horizontal" type="CollisionShape2D" parent="stairs_hallway_collision"]
+position = Vector2(1716, 212)
+shape = SubResource("RectangleShape2D_0k5vt")
+
+[node name="vertical" type="CollisionShape2D" parent="stairs_hallway_collision"]
+position = Vector2(2244, 56)
+shape = SubResource("RectangleShape2D_b4625")
+
+[node name="StairTrigger" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StairTrigger"]
+position = Vector2(2236, 125)
+shape = SubResource("RectangleShape2D_rmkok")
+
+[connection signal="body_entered" from="StairTrigger" to="." method="_on_stair_trigger_body_entered"]
+[connection signal="body_exited" from="StairTrigger" to="." method="_on_stair_trigger_body_exited"]

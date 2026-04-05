@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cb7euxuxgqand"]
+
+[ext_resource type="PackedScene" uid="uid://d3jk1ys6bkw53" path="res://objects/main_char.tscn" id="1_1rc1k"]
+[ext_resource type="Texture2D" uid="uid://daqojvl4pojxi" path="res://sprites/npc/puppet_butler_demo2_512.png" id="2_qy7bs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1rc1k"]
+size = Vector2(361, 70)
+
+[node name="puppet_world" type="Node2D"]
+
+[node name="main_char" parent="." instance=ExtResource("1_1rc1k")]
+position = Vector2(16, -120)
+
+[node name="Camera2D" type="Camera2D" parent="main_char"]
+position = Vector2(-16, 120)
+
+[node name="PuppetButlerDemo2512" type="Sprite2D" parent="."]
+position = Vector2(232, -72)
+texture = ExtResource("2_qy7bs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(123.5, 96)
+shape = SubResource("RectangleShape2D_1rc1k")

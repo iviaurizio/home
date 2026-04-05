@@ -1,0 +1,51 @@
+[gd_scene load_steps=9 format=3 uid="uid://grg4cxgfgxn1"]
+
+[ext_resource type="Script" uid="uid://dke1oub1fkrll" path="res://scripts/bedroom.gd" id="1_gwak2"]
+[ext_resource type="Texture2D" uid="uid://5c1quh6xxba1" path="res://sprites/floors/floor1_256.png" id="1_if1iw"]
+[ext_resource type="Texture2D" uid="uid://ynrvgv1m4o25" path="res://sprites/furniture/bed_512.png" id="2_n17wa"]
+[ext_resource type="Texture2D" uid="uid://l2nylcyuefow" path="res://sprites/furniture/bookshelf_512.png" id="3_gwak2"]
+[ext_resource type="Texture2D" uid="uid://b4d3fysxqdptc" path="res://sprites/other_object/door_closed_512.png" id="4_e8klg"]
+[ext_resource type="PackedScene" uid="uid://ce2xgb52rs20s" path="res://objects/little_puppet.tscn" id="5_n17wa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2uiya"]
+size = Vector2(1096, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u2bv5"]
+size = Vector2(8, 360)
+
+[node name="bedroom" type="Node2D"]
+script = ExtResource("1_gwak2")
+
+[node name="Floor1256" type="Sprite2D" parent="."]
+position = Vector2(644, 176)
+scale = Vector2(1.1322314, 0.08264463)
+texture = ExtResource("1_if1iw")
+
+[node name="Bed512" type="Sprite2D" parent="."]
+position = Vector2(248, 40)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_n17wa")
+
+[node name="Bookshelf512" type="Sprite2D" parent="."]
+position = Vector2(952, 8)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_gwak2")
+
+[node name="DoorClosed512" type="Sprite2D" parent="."]
+position = Vector2(1328, -64)
+texture = ExtResource("4_e8klg")
+
+[node name="bedroom_collision" type="StaticBody2D" parent="."]
+
+[node name="horizontal" type="CollisionShape2D" parent="bedroom_collision"]
+position = Vector2(644, 212)
+shape = SubResource("RectangleShape2D_2uiya")
+
+[node name="vertical" type="CollisionShape2D" parent="bedroom_collision"]
+position = Vector2(92, 36)
+shape = SubResource("RectangleShape2D_u2bv5")
+
+[node name="little_puppet" parent="." instance=ExtResource("5_n17wa")]
+position = Vector2(736, 112)
+
+[connection signal="enter_on_puppet" from="little_puppet" to="." method="_on_little_puppet_enter_on_puppet"]
